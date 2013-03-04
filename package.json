@@ -1,0 +1,26 @@
+{
+  "name": "beisong",
+  "version": "0.0.1",
+  "description": "This project is for my personl reciting experience.",
+  "main": "parser.js",
+  "dependencies": {
+    "line-reader": "~0.2.3",
+    "log4js": "~0.5.7",
+    "string": "~1.2.1",
+    "node.extend": "~1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xinbenlv/beisong.git"
+  },
+  "keywords": [
+    "Recite"
+  ],
+  "author": "Zainan Victor Zhou",
+  "license": "BSD",
+  "readmeFilename": "README"
+}
