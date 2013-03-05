@@ -115,7 +115,6 @@ lineReader.eachLine(filename, function(line, last) {
  
         }
         if (currentStatus !=3 ) {
-            console.log('peom is ' + poem + ',when processing' + line);
             poem[head] = lineSplit[1];
         } 
     } else {
@@ -129,10 +128,22 @@ lineReader.eachLine(filename, function(line, last) {
         }
     }
   }
-
   if(last){
     console.log("Done!");
-    console.log("Parsed:" + JSON.stringify(parsed, null, 4));
+    // console.log("Parsed:" + JSON.stringify(parsed, null, 4));
+  
+    // Count all letters 
+    var num_letters = 0;
+    for (i in parsed) {
+      poem = parsed[i]
+      for(j in poem['正文']) {
+        num_letters = num_letters + poem['正文'][j].length;
+      }
+    }
+    console.log('Result:\n'
+            + 'num_letters=' + num_letters + '\n'
+            + 'num_poems=' + parsed.length + '\n'
+            );
   }
 });
 
