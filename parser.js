@@ -143,6 +143,7 @@ lineReader.eachLine(filename, function(line, last) {
     console.log('Result:\n'
             + 'num_letters=' + num_letters + '\n'
             + 'num_poems=' + parsed.length + '\n'
+            + 'letter/poems=' + num_letters / parsed.length + '\n'
             );
   }
 });
