@@ -145,6 +145,13 @@ lineReader.eachLine(filename, function(line, last) {
             + 'num_poems=' + parsed.length + '\n'
             + 'letter/poems=' + num_letters / parsed.length + '\n'
             );
+    var head = '';
+    for (i=0;i<parsed.length;i++) {    
+        head +=parsed[i]['标题'][0];
+        if ((i+1)%10 == 0) head+='。\n'
+        else if((i+1)%5==0) head+='，'
+    }
+    console.log(head);
   }
 });
 
