@@ -30,7 +30,7 @@ if __name__ == '__main__':
                 all_path[num] = (srcfile,name)
 
     for i in range(1,321,step):
-        thisdir = os.path.abspath(os.path.join(dst, '%03d-%03d' % (i, i+window-1)))
+        thisdir = os.path.abspath(os.path.join(dst, '%03d-%03d' % (i, i+window)))
         if not os.path.exists(thisdir):
             os.mkdir(thisdir)
         for j in range(i, i + window - 1):
