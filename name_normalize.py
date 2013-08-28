@@ -30,10 +30,10 @@ if __name__ == '__main__':
                 all_path[num] = (srcfile,name)
 
     for i in range(1,321,step):
-        thisdir = os.path.abspath(os.path.join(dst, '%03d-%03d' % (i, i+window)))
+        thisdir = os.path.abspath(os.path.join(dst, '%03d-%03d' % (i, i+window - 1)))
         if not os.path.exists(thisdir):
             os.mkdir(thisdir)
-        for j in range(i, i + window - 1):
+        for j in range(i, i + window):
             if j > 321:
                 break
             srcfile = all_path[j][0]
